@@ -19,4 +19,20 @@ final souk = <Souk>[
     'images/souks/el_caid/caid7.jpg',], 
     loction: ('RJFP+R7V, Sousse')
     ),
+    Souk(
+    arname: ('سوق الربع '), 
+    enname: ('Souk Erbaa'), 
+    description: ('description'), 
+    
+    longitude: 10.636724566712127, 
+    latitude:35.8247667412701, 
+    images: [
+      'images/souks/errbaa/errbaa1.jpg',
+    'images/souks/errbaa/errbaa2.jpg',
+    'images/souks/errbaa/errbaa3.jpg',
+    'images/souks/errbaa/errbaa4.jpg',
+    'images/souks/errbaa/errbaa5.jpg',
+    ], 
+    loction: ('RJFP+R7V, Sousse')
+    ),
 ];

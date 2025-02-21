@@ -31,7 +31,10 @@ class CatDeco extends StatelessWidget {
                 route = '/restaurants';
               } else if (lcateg.name == 'Souks') {
                 route = '/SoukList';
+              } else if (lcateg.name == 'Coffee Shops') {
+                route = '/CoffeList';
               }
+
               Navigator.of(context).pushNamed(route);
             },
             child: Container(

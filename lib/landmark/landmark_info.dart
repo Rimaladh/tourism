@@ -97,4 +97,58 @@ final landmarks = <Landmark>[
     longitude: 10.639783189634016,
     latitude: 35.826997054263565,
   ),
+  Landmark(
+    en_name: "The Martyr's  Square",
+    ar_name: 'ساحة الشهداء',
+    info:
+        "In this place, in 1952, near Bab Bhar, which means 'The Gate of the Sea', a battle took place on this land between the coastal inhabitants and the occupiers, resulting in 12 deaths. Their names are mentioned there. This statue has a unique appearance.",
+    images: [
+      'images/sehah/sehah1.jpg',
+      'images/sehah/sehah2.jpg',
+      'images/sehah/sehah3.jpg',
+      
+    ],
+    history: [
+      HistorySection(
+          title: 'History & Foundation',
+          content:
+              'The mosque was built in 850 AD by order of the Aghlabid ruler Abu al-Abbas Muhammad, making it one of the oldest mosques in Tunisia.'),
+      HistorySection(
+          title: 'Architecture & Design',
+          content:
+              'Unlike traditional mosques, the Great Mosque features massive stone walls and watchtower-like structures, resembling a fortress. It notably lacks a minaret, emphasizing its defensive purpose'),
+      HistorySection(
+          title: 'Historical Significance',
+          content:
+              'Beyond being a place of worship, the mosque played a key role in the city’s religious and cultural life. Today, it remains one of Sousse’s most important historical monuments.'),
+    ],
+     
+    longitude: 10.639783189634016,
+    latitude: 35.826997054263565,
+  ),
+  Landmark(
+    en_name: "Virgil Mosaic",
+    ar_name: 'فسيفساء فيرجيل',
+    info:
+        "The Virgil Mosaic is a Roman-era artwork dating back to the 3rd century.  It was discovered in Sousse, in a wealthy Roman house.It features the poet Virgil wearing a toga(traditional garment worn in ancient Rome), holding a scroll with writings. He is surrounded by two female figures—one holding a scroll and the other a theater mask. This mosaic highlights the literary and cultural significance of Virgil in Roman society, reflecting themes of knowledge and the arts.",
+    images: [
+      'images/tableau_virgile.jpg',
+      
+      
+    ],
+    history: [
+      HistorySection(
+          title: 'Roman Toga',
+          content:
+              'Large, draped piece of fabric, typically made of wool, worn over a tunic. The toga was a symbol of Roman citizenship and was usually worn by men during formal occasions, public appearances, or important events. '),
+      HistorySection(
+          title: 'images/toga.jpg',
+          content:
+              'In the context of the Virgil Mosaic, Virgil is shown wearing a toga to reflect his status as an important figure in Roman culture.'),
+      ],
+     
+    longitude: 10.639783189634016,
+    latitude: 35.826997054263565,
+  ),
+  
 ];

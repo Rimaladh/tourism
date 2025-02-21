@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
+import 'package:tourism/Coffee/coffe_info.dart';
+import 'package:tourism/Coffee/coffee_list.dart';
+import 'package:tourism/Coffee/onclick_coffee.dart';
 import 'package:tourism/GuestHouse/guest_deco.dart';
 import 'package:tourism/GuestHouse/guest_info.dart';
 import 'package:tourism/GuestHouse/onClick_img.dart';
@@ -19,7 +22,6 @@ import 'package:tourism/landmark/see_history.dart';
 import 'package:tourism/learn_more/list_deco.dart';
 import 'package:tourism/learn_more/list_info.dart';
 import 'package:tourism/maps/show_map.dart';
-import 'package:tourism/onBoarding/on_Boarding.dart';
 import 'package:tourism/righteous_people/onclick.dart';
 import 'package:tourism/righteous_people/people_info.dart';
 import 'package:tourism/righteous_people/show_people.dart';
@@ -57,12 +59,15 @@ class _MyAppState extends State<MyApp> {
         '/righteous_info': (BuildContext context) =>
             ShowPeople(pinfo: peopleInfo),
         '/guestHouse': (BuildContext context) => HouseDeco(house: house),
-        '/onClickImg': (BuildContext context) =>OnclickImg(listHouse: house[0]),
-        '/onClickResto':(BuildContext context)=>OnclickResto(resto: resto[0]),
-        '/restaurants': (BuildContext context) => RestoDeco(resto:resto),
-        '/onClickSouk':(BuildContext context)=>OnclickSouk(souk:souk[0]),
-        '/SoukList': (BuildContext context) => SoukList(souk:souk),
-
+        '/onClickImg': (BuildContext context) =>
+            OnclickImg(listHouse: house[0]),
+        '/onClickResto': (BuildContext context) =>
+            OnclickResto(resto: resto[0]),
+        '/restaurants': (BuildContext context) => RestoDeco(resto: resto),
+        '/onClickSouk': (BuildContext context) => OnclickSouk(souk: souk[0]),
+        '/SoukList': (BuildContext context) => SoukList(souk: souk),
+        '/onClickCoffee': (BuildContext context) => OnclickCoffee(coffee: coffee[0]),
+        '/CoffeList': (BuildContext context) => CoffeeList(coffee: coffee),
 
       },
       onGenerateRoute: (settings) {
@@ -77,7 +82,7 @@ class _MyAppState extends State<MyApp> {
         }
         return null;
       },
-      home: OnBoarding(),
+      home: HomeScreen(),
     );
   }
 }

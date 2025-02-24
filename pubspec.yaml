@@ -41,6 +41,7 @@ dependencies:
   google_maps_flutter: ^2.2.8
   another_carousel_pro: ^1.0.2
   url_launcher: ^6.1.11
+  geolocator: ^13.0.2
 
 dev_dependencies:
   flutter_test:

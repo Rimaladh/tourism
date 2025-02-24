@@ -12,6 +12,9 @@ class History extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('History of ${landmark.en_name}'),
+        centerTitle: true,
+        titleTextStyle: TextStyle(
+            fontWeight: FontWeight.w400, color: Colors.black, fontSize: 23),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -24,22 +27,26 @@ class History extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      section.title,
-                      style: GoogleFonts.cairo(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                    if (section.title == 'Roman Toga')
+                      Image.asset('images/toga.jpg'),
+                    if (section.title != 'Roman Toga') ...[
+                      Text(
+                        section.title,
+                        style: GoogleFonts.cairo(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 8),
-                    Text(
-                      section.content,
-                      style: GoogleFonts.tajawal(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          color: const Color.fromARGB(255, 92, 91, 91)),
-                    ),
+                      Text(
+                        section.content,
+                        style: GoogleFonts.cairo(
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal,
+                          color: const Color.fromARGB(255, 106, 105, 105),
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               );

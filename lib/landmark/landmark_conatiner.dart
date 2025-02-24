@@ -31,26 +31,24 @@ class _LandDecoState extends State<LandDeco> {
                 itemBuilder: (context, index) {
                   final land = widget.landmark[index];
                   return GestureDetector(
-                    // Use GestureDetector to handle tap
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => Place1(
-                              landmark: land), // Pass the clicked landmark here
+                          builder: (context) => Place1(landmark: land),
                         ),
                       );
                     },
                     child: Container(
-                      margin: const EdgeInsets.all(33),
+                      margin: const EdgeInsets.all(23),
                       padding: const EdgeInsets.only(top: 7),
                       width: 220,
-                      height: 300,
+                      height: 290,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withAlpha(110),
+                            color: Colors.grey.withAlpha(90),
                             spreadRadius: 5,
                             blurRadius: 4,
                             offset: Offset(0, 3), // changes position of shadow
@@ -93,8 +91,13 @@ class _LandDecoState extends State<LandDeco> {
                             )),
                             TextButton(
                               onPressed: () {
-                                Navigator.of(context).pushNamed('/place1');
+                                 Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => Place1(landmark: land),
+                                  ),
+                                );
                               },
+                              
                               style: TextButton.styleFrom(
                                 foregroundColor: Color(0xFF2B6CB0),
                               ),

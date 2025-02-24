@@ -140,11 +140,11 @@ final landmarks = <Landmark>[
       HistorySection(
           title: 'Roman Toga',
           content:
-              'Large, draped piece of fabric, typically made of wool, worn over a tunic. The toga was a symbol of Roman citizenship and was usually worn by men during formal occasions, public appearances, or important events. '),
+              'images/toga.jpg'),
       HistorySection(
-          title: 'images/toga.jpg',
+          title: '',
           content:
-              'In the context of the Virgil Mosaic, Virgil is shown wearing a toga to reflect his status as an important figure in Roman culture.'),
+              'Large, draped piece of fabric, typically made of wool, worn over a tunic. The toga was a symbol of Roman citizenship and was usually worn by men during formal occasions, public appearances, or important events. In the context of the Virgil Mosaic, Virgil is shown wearing a toga to reflect his status as an important figure in Roman culture.'),
       ],
      
     longitude: 10.639783189634016,

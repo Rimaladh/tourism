@@ -159,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Transform.translate(
-                      offset: const Offset(-40, -210),
+                      offset: const Offset(-7, -220),
                       child: LandDeco(landmark: landmarks),
                     ),
                     Transform.translate(

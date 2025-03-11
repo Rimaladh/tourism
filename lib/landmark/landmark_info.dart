@@ -141,4 +141,26 @@ final landmarks = <Landmark>[
     longitude: 10.639783189634016,
     latitude: 35.826997054263565,
   ),
+  Landmark(
+    en_name: "Bou Ftata Mosque",
+    ar_name: ' مسجد بو فتاتة',
+    info:
+        "The Mosque Bou Ftata is a historic mosque.\n Constructed in 838 AD, it is one of the oldest mosques in the city and has significantly influenced Islamic architecture in the region.\n Despite its modest size, the mosque's design served as a model for other notable structures, including the Great Mosque of Sousse",
+    images: [
+      'images/boufteta/Bou_Ftetah1.jpg',
+    ],
+    history: [
+      HistorySection(
+          title: 'History & Foundation',
+          content:
+              'The mosque was built in 850 AD by order of the Aghlabid ruler Abu al-Abbas Muhammad, making it one of the oldest mosques in Tunisia.'
+              ),
+      HistorySection(
+          title: 'Architecture & Design',
+          content:
+             " The mosque's western and northern facades feature Kufic inscriptions, which are among the earliest examples in Ifriqiya "),
+      ],
+    longitude: 10.639783189634016,
+    latitude: 35.826997054263565,
+  ),
 ];

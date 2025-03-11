@@ -32,7 +32,6 @@ final landmarks = <Landmark>[
           content:
               "Roman mosaics : \n – Some of the finest and most detailed in Tunisia, depicting mythological scenes and daily life. \n Punic and Roman artifacts : \n – Pottery, statues, and coins that reveal the commercial and cultural exchanges of ancient Sousse. \n Islamic ceramics : \n – A rich collection of glazed pottery that showcases the city’s artistic heritage. \n Byzantine relics : \n  – Christian symbols and decorative pieces reflecting the transition from Roman to Byzantine rule."),
     ],
-     
     longitude: 10.635317355672358,
     latitude: 35.82303695635557,
   ),
@@ -63,7 +62,6 @@ final landmarks = <Landmark>[
             "Now a UNESCO World Heritage site, the Ribat attracts visitors from around the world, offering a glimpse into the region's history and impressive Islamic architecture.",
       ),
     ],
-     
     longitude: 10.638792493086545,
     latitude: 35.827682799001956,
   ),
@@ -71,7 +69,7 @@ final landmarks = <Landmark>[
     en_name: 'The Great Mosque',
     ar_name: 'الجامع الكبير',
     info:
-        "The Great Mosque of Sousse is one of Tunisia’s most significant Islamic landmarks. Built in the 9th century during the Aghlabid era, it stands out with its fortress-like design, reflecting the military character of the city at the time.",
+        "The Great Mosque of Sousse is one of Tunisia’s most significant Islamic landmarks. \n Built in the 9th century during the Aghlabid era, it stands out with its fortress-like design, reflecting the military character of the city at the time.",
     images: [
       'images/jemaa/jemaa1.jpg',
       'images/jemaa/jemaa2.jpg',
@@ -93,20 +91,16 @@ final landmarks = <Landmark>[
           content:
               'Beyond being a place of worship, the mosque played a key role in the city’s religious and cultural life. Today, it remains one of Sousse’s most important historical monuments.'),
     ],
-     
     longitude: 10.639783189634016,
     latitude: 35.826997054263565,
   ),
   Landmark(
-    en_name: "The Martyr's  Square",
-    ar_name: 'ساحة الشهداء',
+    en_name: "Kasbah of sousse",
+    ar_name: ' قصبة سوسة',
     info:
-        "In this place, in 1952, near Bab Bhar, which means 'The Gate of the Sea', a battle took place on this land between the coastal inhabitants and the occupiers, resulting in 12 deaths. Their names are mentioned there. This statue has a unique appearance.",
+        "The Kasbah of Sousse is a historic fortress that overlooks the city and the Mediterranean Sea. \n Built in the 9th century, it served as a military stronghold and a residence for local rulers.",
     images: [
-      'images/sehah/sehah1.jpg',
-      'images/sehah/sehah2.jpg',
-      'images/sehah/sehah3.jpg',
-      
+      'images/jemaa/jemaa1.jpg',
     ],
     history: [
       HistorySection(
@@ -122,33 +116,29 @@ final landmarks = <Landmark>[
           content:
               'Beyond being a place of worship, the mosque played a key role in the city’s religious and cultural life. Today, it remains one of Sousse’s most important historical monuments.'),
     ],
-     
     longitude: 10.639783189634016,
     latitude: 35.826997054263565,
   ),
   Landmark(
-    en_name: "Virgil Mosaic",
-    ar_name: 'فسيفساء فيرجيل',
+    en_name: "Bou Ftata Mosque",
+    ar_name: ' مسجد بو فتاتة',
     info:
-        "The Virgil Mosaic is a Roman-era artwork dating back to the 3rd century.  It was discovered in Sousse, in a wealthy Roman house.It features the poet Virgil wearing a toga(traditional garment worn in ancient Rome), holding a scroll with writings. He is surrounded by two female figures—one holding a scroll and the other a theater mask. This mosaic highlights the literary and cultural significance of Virgil in Roman society, reflecting themes of knowledge and the arts.",
+        "The Mosque Bou Ftata is a historic mosque.\n Constructed in 838 AD, it is one of the oldest mosques in the city and has significantly influenced Islamic architecture in the region.\n Despite its modest size, the mosque's design served as a model for other notable structures, including the Great Mosque of Sousse",
     images: [
-      'images/tableau_virgile.jpg',
-      
-      
+      'images/boufteta/Bou_Ftetah1.jpg',
     ],
     history: [
       HistorySection(
-          title: 'Roman Toga',
+          title: 'History & Foundation',
           content:
-              'images/toga.jpg'),
+              'The mosque was built in 850 AD by order of the Aghlabid ruler Abu al-Abbas Muhammad, making it one of the oldest mosques in Tunisia.'
+              ),
       HistorySection(
-          title: '',
+          title: 'Architecture & Design',
           content:
-              'Large, draped piece of fabric, typically made of wool, worn over a tunic. The toga was a symbol of Roman citizenship and was usually worn by men during formal occasions, public appearances, or important events. In the context of the Virgil Mosaic, Virgil is shown wearing a toga to reflect his status as an important figure in Roman culture.'),
+             " The mosque's western and northern facades feature Kufic inscriptions, which are among the earliest examples in Ifriqiya "),
       ],
-     
     longitude: 10.639783189634016,
     latitude: 35.826997054263565,
   ),
-  
 ];

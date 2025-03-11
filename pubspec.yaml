@@ -43,6 +43,14 @@ dependencies:
   url_launcher: ^6.1.11
   geolocator: ^13.0.2
 
+
+
+  latlong2: ^0.9.1
+  flutter_map: ^7.0.0
+  flutter_map_location_marker: ^9.1.1
+  http: ^1.3.0
+  flutter_polyline_points: ^2.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -96,12 +104,13 @@ flutter:
    - images/jemaa/jemaa4.jpg
    - images/jemaa/jemaa5.jpg
 
-   - images/sehah/sehah1.jpg 
-   - images/sehah/sehah2.jpg 
-   - images/sehah/sehah3.jpg 
 
-   - images/tableau_virgile.jpg
-   - images/toga.jpg
+   - images/landmarks/kasbah/kasba2.jpg
+
+
+
+   - images/boufteta/Bou_Ftetah1.jpg
+   
    
 
 

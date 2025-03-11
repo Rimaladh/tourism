@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:tourism/model/places.dart';
 
@@ -14,52 +15,76 @@ class Maps extends StatefulWidget {
 
 class _MapsState extends State<Maps> {
   late GoogleMapController _mapController;
+  LatLng? _userLocation; // To store the user's location
+
+  @override
+  void initState() {
+    super.initState();
+    _getUserLocation(); // Fetch user location when map loads
+  }
+
+  Future<void> _getUserLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    // Check if location services are enabled
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      return;
+    }
+
+    // Check and request permission
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return;
+      }
+    }
+
+    // Get the current position
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+
+    setState(() {
+      _userLocation = LatLng(position.latitude, position.longitude);
+    });
+
+    // Move camera to user's location
+    _mapController.animateCamera(CameraUpdate.newLatLng(_userLocation!));
+  }
 
   @override
   Widget build(BuildContext context) {
-    Set<Marker> markers = widget.places.map((place) {
-      return Marker(
-        markerId: MarkerId(place.name),
-        position: LatLng(place.latitude, place.longitude),
+    Set<Marker> markers = {
+      Marker(
+        markerId: const MarkerId("User"),
+        position: _userLocation ?? widget.initialPlace.toLatLng(),
+        infoWindow: const InfoWindow(title: "You are here"),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
+      ),
+      Marker(
+        markerId: MarkerId(widget.initialPlace.name),
+        position: widget.initialPlace.toLatLng(),
         infoWindow: InfoWindow(
-          title: place.name,
-          snippet: place.description,
+          title: widget.initialPlace.name,
+          snippet: widget.initialPlace.description,
         ),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRose),
-      );
-    }).toSet();
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Google Maps'),
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
       ),
+    };
+
+    return Scaffold(
       body: GoogleMap(
-        mapType: MapType.normal,
+        myLocationEnabled: true,
         initialCameraPosition: CameraPosition(
-          target: LatLng(
-              widget.initialPlace.latitude, widget.initialPlace.longitude),
-          zoom: 25.0,
+          target: widget.initialPlace.toLatLng(),
+          zoom: 15.0,
         ),
         markers: markers,
         onMapCreated: (GoogleMapController controller) {
           _mapController = controller;
-          _moveToPlace(widget.initialPlace); // Move camera when map loads
         },
-      ),
-    );
-  }
-
-  void _moveToPlace(Places place) {
-    _mapController.animateCamera(
-      CameraUpdate.newLatLngZoom(
-        LatLng(place.latitude, place.longitude),
-        29.0,
       ),
     );
   }

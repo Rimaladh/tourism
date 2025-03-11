@@ -1,3 +1,4 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:tourism/model/places.dart';
 
 class Resto implements Places{
@@ -31,6 +32,10 @@ class Resto implements Places{
     });
     
       @override
-      
       String get name =>arname;
+
+       @override
+  LatLng toLatLng() {
+    return LatLng(latitude, longitude);
+  }
 }

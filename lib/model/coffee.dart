@@ -1,3 +1,4 @@
+import 'package:google_maps_flutter_platform_interface/src/types/location.dart';
 import 'package:tourism/model/places.dart';
 
 class Coffee implements Places {
@@ -35,4 +36,9 @@ class Coffee implements Places {
 
   @override
   String get name => arname;
+
+   @override
+  LatLng toLatLng() {
+    return LatLng(latitude, longitude);
+  }
 }

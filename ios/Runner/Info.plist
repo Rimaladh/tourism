@@ -9,6 +9,9 @@
 	<string>tel</string>
 	
 </array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location for navigation.</string>
+
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

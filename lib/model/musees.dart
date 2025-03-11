@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:tourism/model/places.dart';
 
 class Musee implements Places{
@@ -20,6 +21,10 @@ class Musee implements Places{
   
   @override
   String get name => engname;
+   @override
+  LatLng toLatLng() {
+    return LatLng(latitude, longitude);
+  }
 
 
   
